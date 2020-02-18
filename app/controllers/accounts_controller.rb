@@ -1,73 +1,49 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
-  # GET /accounts
-  # GET /accounts.json
-  def index
-    @accounts = Account.all
-  end
-
-  # GET /accounts/1
-  # GET /accounts/1.json
   def show
   end
 
-  # GET /accounts/new
   def new
     @account = Account.new
   end
 
-  # GET /accounts/1/edit
   def edit
   end
 
-  # POST /accounts
-  # POST /accounts.json
   def create
-    @account = Author.first.build_account(account_params)
+    @author = Author.create(author_params)
+    @account = @author.build_account(account_params)
 
-    respond_to do |format|
-      if @account.save
-        format.html { redirect_to @account, notice: 'Account was successfully created.' }
-        format.json { render :show, status: :created, location: @account }
-      else
-        format.html { render :new }
-        format.json { render json: @account.errors, status: :unprocessable_entity }
-      end
+    if @author.save and @account.save
+      redirect_to @account, notice: 'Account was successfully created.'
+    else
+      render :new
     end
   end
 
-  # PATCH/PUT /accounts/1
-  # PATCH/PUT /accounts/1.json
   def update
-    respond_to do |format|
-      if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
-        format.json { render :show, status: :ok, location: @account }
-      else
-        format.html { render :edit }
-        format.json { render json: @account.errors, status: :unprocessable_entity }
-      end
+    if @account.author.update(author_params) and @account.update(account_params)
+      redirect_to @account, notice: 'Account was successfully updated.'
+    else
+      render :edit
     end
   end
 
-  # DELETE /accounts/1
-  # DELETE /accounts/1.json
   def destroy
     @account.destroy
-    respond_to do |format|
-      format.html { redirect_to accounts_url, notice: 'Account was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to accounts_url, notice: 'Account was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_account
       @account = Account.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    def author_params
+      params.require(:author).permit(:name)
+    end
+
     def account_params
       params.require(:account).permit(:email, :password, :password_confirmation)
     end
