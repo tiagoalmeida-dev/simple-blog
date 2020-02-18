@@ -1,10 +1,9 @@
 # coding: utf-8
 Rails.application.routes.draw do
 
-  resources :authors
   root 'home#index'
 
-  resources :accounts
+  resources :accounts, except: [:index]
   resources :sessions, only: [:new, :create, :destroy]
 
   get 'signup', to: 'accounts#new', as: 'signup'
