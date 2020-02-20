@@ -32,7 +32,7 @@ class AuthorsController < ApplicationController
 
   def destroy
     @author.destroy
-    redirect_to Authors_url, notice: 'author was successfully destroyed.'
+    redirect_to new_author_url, notice: 'author was successfully destroyed.'
   end
 
   private
