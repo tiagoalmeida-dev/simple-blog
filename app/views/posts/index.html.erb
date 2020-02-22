@@ -1,0 +1,6 @@
+<h1>Posts</h1>
+<ul>
+    <% for post in @posts do %>
+        <li><%= link_to post.title, posts_url(post) %></li>
+    <% end %>
+</ul>

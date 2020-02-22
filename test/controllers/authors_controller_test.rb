@@ -2,9 +2,8 @@ require 'test_helper'
 
 class AuthorsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @author = authors(:one)
-    @account = accounts(:one)
-    login_with @account
+    @author = authors(:first)
+    login_with accounts(:default)
   end
 
   test "should get new" do
@@ -22,8 +21,7 @@ class AuthorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show author" do
-    @author.account = @account
-    get author_url(@author)
+    get author_url(Author.last)
     assert_response :success
   end
 

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  resources :posts
   resources :authors, except: [:index]
   resources :sessions, only: [:new, :create, :destroy]
 

@@ -7,7 +7,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get create" do
-    @account = accounts(:one)
+    @account = accounts(:default)
     post sessions_url, params: { email: @account.email, password: 'secret', password_confirmation: 'secret' }
 
     assert_redirected_to root_url
