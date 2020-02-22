@@ -4,6 +4,7 @@ class AuthorsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @author = authors(:one)
     @account = accounts(:one)
+    login_with @account
   end
 
   test "should get new" do

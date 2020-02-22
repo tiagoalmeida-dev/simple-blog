@@ -14,6 +14,8 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get destroy" do
+    login_with accounts(:default)
+
     get root_url
     assert_response :success
   end
