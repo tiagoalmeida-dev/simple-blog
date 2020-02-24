@@ -29,6 +29,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to author_posts_url
   end
 
+  test "not should create a invalid post" do
+    post author_posts_url(@post.author), params: {post: {title: '', body: @post.body}}
+    assert_template :new
+  end
+
   test "should edit a post" do
     get edit_author_post_url(@post.author, @post)
     assert_response :success
@@ -39,8 +44,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to author_post_url(@post.author, @post)
   end
 
-  test "not should create a invalid post" do
-    post author_posts_url(@post.author), params: {post: {title: '', body: @post.body}}
-    assert_template :new
+  test "should delete a post" do
+    assert_difference('Post.count', -1) do
+      delete author_post_url(@post.author, @post)
+    end
+
+    assert_redirected_to author_posts_url(@post.author)
   end
+
 end
