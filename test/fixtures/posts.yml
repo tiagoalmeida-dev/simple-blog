@@ -1,6 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+first:
   title: 'First post'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
-  author_id: 1
+  author: first

@@ -4,6 +4,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
@@ -13,7 +17,7 @@ class PostsController < ApplicationController
     @post.author = current_author
 
     if @post.save
-      redirect_to posts_url
+      redirect_to author_posts_url
     else
       render :new
     end

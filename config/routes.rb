@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :posts
-  resources :authors, except: [:index]
+  resources :authors, except: [:index] do
+    resources :posts
+  end
+
   resources :sessions, only: [:new, :create, :destroy]
 
   get 'signup', to: 'authors#new', as: 'signup'

@@ -1,6 +1,6 @@
 class Author < ApplicationRecord
   has_one :account, dependent: :destroy
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   validates :name, presence: true
 
