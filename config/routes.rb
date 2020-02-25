@@ -7,9 +7,11 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  resources :sessions, only: [:new, :create, :destroy]
+  namespace :admin do
+    resources :sessions, only: [:new, :create, :destroy]
+  end
 
-  get 'signup', to: 'authors#new', as: 'signup'
-  get 'login',  to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'signup', to: 'admin/authors#new', as: 'signup'
+  get 'login',  to: 'admin/sessions#new', as: 'login'
+  get 'logout', to: 'admin/sessions#destroy', as: 'logout'
 end

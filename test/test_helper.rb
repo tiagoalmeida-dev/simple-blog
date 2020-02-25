@@ -11,7 +11,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   def login_with(account, password='secret')
-    post sessions_url, params: { email: account.email, password: password, password_confirmation: password }
+    post admin_sessions_url, params: { email: account.email, password: password, password_confirmation: password }
   end
 
 end

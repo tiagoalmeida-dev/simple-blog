@@ -1,6 +1,6 @@
 <p id=”alert”><%= alert %></p>
 <h1>Login</h1>
-<%= form_with(url: sessions_path, local: true) do |f| %>
+<%= form_with(url: admin_sessions_path, local: true) do |f| %>
     <div class=”field”>
         <%= f.label :email %>
         <%= f.text_field :email %>
