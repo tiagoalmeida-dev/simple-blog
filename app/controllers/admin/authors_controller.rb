@@ -1,9 +1,6 @@
-class AuthorsController < ApplicationController
+class Admin::AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
   skip_before_action :authorized, only: [:new, :create]
-
-  def show
-  end
 
   def new
     @author = Author.new
@@ -17,7 +14,7 @@ class AuthorsController < ApplicationController
     @author = Author.create(author_params)
 
     if @author.save
-      redirect_to @author, notice: 'author was successfully created.'
+      redirect_to admin_author_url(@author), notice: 'author was successfully created.'
     else
       render :new
     end
@@ -25,7 +22,7 @@ class AuthorsController < ApplicationController
 
   def update
     if @author.update(author_params)
-      redirect_to @author, notice: 'author was successfully updated.'
+      redirect_to admin_author_url(@author), notice: 'author was successfully updated.'
     else
       render :edit
     end
@@ -33,7 +30,7 @@ class AuthorsController < ApplicationController
 
   def destroy
     @author.destroy
-    redirect_to new_author_url, notice: 'author was successfully destroyed.'
+    redirect_to new_admin_author_url, notice: 'author was successfully destroyed.'
   end
 
   private

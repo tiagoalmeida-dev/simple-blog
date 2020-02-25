@@ -3,12 +3,12 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :authors, except: [:index] do
-    resources :posts
-  end
-
   namespace :admin do
     resources :sessions, only: [:new, :create, :destroy]
+
+    resources :authors, except: [:index] do
+      resources :posts
+    end
   end
 
   get 'signup', to: 'admin/authors#new', as: 'signup'

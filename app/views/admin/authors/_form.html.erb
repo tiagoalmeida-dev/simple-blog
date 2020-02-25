@@ -1,10 +1,10 @@
-<%= form_with(model: @author, local: true) do |author_form| %>
-  <% if @author.errors.any? %>
+<%= form_with(model: author, url: admin_authors_path, local: true) do |author_form| %>
+  <% if author.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@author.errors.count, "error") %> prohibited this account from being saved:</h2>
+      <h2><%= pluralize(author.errors.count, "error") %> prohibited this account from being saved:</h2>
 
       <ul>
-        <% @author.errors.full_messages.each do |message| %>
+        <% author.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>

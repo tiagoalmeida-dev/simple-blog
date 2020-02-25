@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Admin::PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = current_author.posts.create(post_params)
 
     if @post.save
-      redirect_to author_posts_url
+      redirect_to admin_author_posts_url
     else
       render :new
     end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to [current_author, @post]
+      redirect_to admin_author_post_url(current_author, @post)
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to author_posts_url current_author
+    redirect_to admin_author_posts_url current_author
   end
 
   private
