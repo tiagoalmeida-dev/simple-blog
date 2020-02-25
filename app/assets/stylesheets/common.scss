@@ -1,0 +1,21 @@
+@import './base/tokens';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Montserrat', serif;
+}
+
+body {
+    background-color: $light-color;
+}
+
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 8px;
+}

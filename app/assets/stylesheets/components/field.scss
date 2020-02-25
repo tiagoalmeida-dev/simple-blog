@@ -1,0 +1,17 @@
+@import '../base/tokens';
+
+.field {
+  border: 2px solid $dark-color;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.field__text, .field__password {
+  font-size: 2em;
+  padding: 10px;
+
+  &::placeholder {
+    color: $dark-color;
+  }
+}

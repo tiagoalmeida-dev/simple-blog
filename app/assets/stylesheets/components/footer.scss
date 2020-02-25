@@ -1,0 +1,18 @@
+@import '../base/tokens';
+
+.footer {
+  height: 80px;
+  background-color: $primary-color;
+
+  > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date {
+    font-size: 2em;
+    font-weight: 500;
+    color: $light-font-color
+  }
+}

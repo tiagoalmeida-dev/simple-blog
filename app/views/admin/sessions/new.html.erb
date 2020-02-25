@@ -1,15 +1,13 @@
-<p id=”alert”><%= alert %></p>
-<h1>Login</h1>
-<%= form_with(url: admin_sessions_path, local: true) do |f| %>
-    <div class=”field”>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+<main class="container">
+    <div class="login">
+        <div class="login__container">
+            <h1 class="login__title title">Login</h1>
+            <%= form_with(url: admin_sessions_path, local: true, class: 'login__form form') do |f| %>
+                    <%= f.text_field :email, class: 'field field__text', placeholder: 'Email' %>
+                    <%= f.password_field :password, class: 'field field__password', placeholder: 'Password' %>
+                    <%= f.submit "Enter", class: 'login__button button button--primary' %>
+            <% end %>
+        </div>
     </div>
-    <div class=”field”>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-    </div>
-    <div class=”actions”>
-        <%= f.submit "Login" %>
-    </div>
-<% end %>
+</main>
+

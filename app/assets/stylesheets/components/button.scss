@@ -1,0 +1,18 @@
+@import '../base/tokens';
+
+.button {
+    display: block;
+    background: transparent;
+    padding: 12px 60px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.6em;
+    font-weight: bold;
+    border: 1px solid $dark-color;
+
+    &--primary {
+        background: $primary-button-bg-color;
+        color: $light-font-color
+    }
+}
