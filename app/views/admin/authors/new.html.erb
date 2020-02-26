@@ -1,3 +1,20 @@
-<h1>New Author</h1>
+<main class="container">
+    <div class="signup">
+        <div class="signup__container">
+            <p class="signup__title title">Sign up</p>
 
-<%= render 'form', author: @author %>
+            <%= form_with(model: @author, url: admin_authors_path, local: true, class: "signup__form form") do |author_form| %>
+
+                <%= author_form.text_field :name, class: "field field__text", placeholder: "Name"  %>
+
+                <%= author_form.fields_for :account do |account_form| %>
+                    <%= account_form.text_field :email, class: "field field__text", placeholder: "Email" %>
+                    <%= account_form.password_field :password, class: "field field__password", placeholder: "Password" %>
+                    <%= account_form.password_field :password_confirmation, class: "field field__password", placeholder: "Confirm Password" %>
+                <% end %>
+
+                <%= author_form.submit "Create", class: "signup__button button button--primary" %>
+            <% end %>
+        </div>
+    </div>
+</main>

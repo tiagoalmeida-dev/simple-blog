@@ -1,6 +1,6 @@
 @import '../base/mixins';
 
-.login {
+.signup {
   min-height: calc(100vh - 170px - 80px);
 
   &__container {
@@ -17,7 +17,7 @@
     width: 100%;
     max-width: 400px;
     > input {
-        margin-bottom: 24px;
+      margin-bottom: 24px;
     }
   }
 
@@ -27,8 +27,11 @@
 }
 
 @include tablet {
-  .login__container {
-    justify-content: center;
-    height: 100%;
-  }
+    .signup {
+        height: 100%;
+        &__container {
+            justify-content: center;
+            height: 100%;
+        }
+    }
 }
