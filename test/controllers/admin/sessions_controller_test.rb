@@ -6,11 +6,19 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get create" do
+  test "should log in the application" do
     @account = accounts(:default)
-    post admin_sessions_url, params: { email: @account.email, password: 'secret', password_confirmation: 'secret' }
+    post admin_sessions_url, params: { email: @account.email, password: 'secret'}
 
     assert_redirected_to root_url
+  end
+
+  test "should return a error message" do
+    @account = accounts(:default)
+    post admin_sessions_url, params: { email: @account.email, password: ''}
+
+    assert_equal 'Unable to log in. Please check your credentials and try again.', flash[:alert]
+    assert_redirected_to login_url
   end
 
   test "should get destroy" do

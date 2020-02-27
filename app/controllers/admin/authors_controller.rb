@@ -14,7 +14,7 @@ class Admin::AuthorsController < ApplicationController
     @author = Author.create(author_params)
 
     if @author.save
-      redirect_to admin_author_url(@author), notice: 'author was successfully created.'
+      redirect_to admin_author_url(@author)
     else
       render :new
     end
@@ -22,7 +22,7 @@ class Admin::AuthorsController < ApplicationController
 
   def update
     if @author.update(author_params)
-      redirect_to admin_author_url(@author), notice: 'author was successfully updated.'
+      redirect_to admin_author_url(@author)
     else
       render :edit
     end
@@ -30,15 +30,16 @@ class Admin::AuthorsController < ApplicationController
 
   def destroy
     @author.destroy
-    redirect_to new_admin_author_url, notice: 'author was successfully destroyed.'
+    redirect_to new_admin_author_url
   end
 
   private
-    def set_author
-      @author = Author.find(params[:id])
-    end
 
-    def author_params
-      params.require(:author).permit(:name, account_attributes: [:email, :password, :password_confirmation])
-    end
+  def set_author
+    @author = Author.find(params[:id])
+  end
+
+  def author_params
+    params.require(:author).permit(:name, account_attributes: [:email, :password, :password_confirmation])
+  end
 end
