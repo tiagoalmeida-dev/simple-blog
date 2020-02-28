@@ -1,12 +1,19 @@
 <main class="container">
-    <div class="login">
-        <div class="login__container">
-            <h1 class="login__title title">Login</h1>
-            <%= form_with(url: admin_sessions_path, local: true, class: 'login__form form') do |f| %>
+    <div class="auth">
+
+        <div class="auth__form">
+
+            <h1 class="auth__title title">Take a break and let's have a coffee...</h1>
+
+            <p>Login</p>
+            <%= form_with(url: admin_sessions_path, local: true, class: 'form') do |f| %>
                     <%= f.text_field :email, class: 'field field__text', placeholder: 'Email' %>
                     <%= f.password_field :password, class: 'field field__password', placeholder: 'Password' %>
-                    <%= f.submit "Enter", class: 'login__button button button--primary' %>
+                    <%= f.submit "Enter", class: 'button button--primary' %>
             <% end %>
+        </div>
+        <div class="image">
+            <%= image_tag("login.svg", :alt => "people waking on the streat") %>
         </div>
     </div>
 </main>

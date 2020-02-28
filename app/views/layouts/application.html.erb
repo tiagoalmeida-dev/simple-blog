@@ -12,12 +12,6 @@
   </head>
 
   <body>
-      <menu class="menu">
-          <div class="container">
-              <p class="menu__brand">Coffee break</p>
-              <a href="https://github.com/wnascy/coffee-break" class="button button--primary">Github</a>
-          </div>
-      </menu>
       <div class="message">
         <% if flash.alert %>
             <div class="message--alert">
@@ -25,6 +19,12 @@
             </div>
         <% end %>
       </div>
+      <menu class="menu">
+          <div class="container">
+              <p class="menu__brand">Coffee Break</p>
+              <a href="https://github.com/wnascy/coffee-break" class="button button--primary">Github</a>
+          </div>
+      </menu>
       <%= yield %>
       <footer class="footer">
           <div class="container">

@@ -1,9 +1,12 @@
 <main class="container">
-    <div class="signup">
-        <div class="signup__container">
-            <p class="signup__title title">Sign up</p>
+    <div class="auth">
 
-            <%= form_with(model: @author, url: admin_authors_path, local: true, class: "signup__form form") do |author_form| %>
+        <div class="auth__form">
+
+            <h1 class="auth__title title">Don't think to much, just write your dreams...</h1>
+
+            <p>Sign up</p>
+            <%= form_with(model: @author, url: admin_authors_path, local: true, class: "form") do |author_form| %>
 
                 <%= author_form.text_field :name, class: "field field__text", placeholder: "Name"  %>
 
@@ -13,8 +16,12 @@
                     <%= account_form.password_field :password_confirmation, class: "field field__password", placeholder: "Confirm Password" %>
                 <% end %>
 
-                <%= author_form.submit "Create", class: "signup__button button button--primary" %>
+                <%= author_form.submit "Create", class: "button button--primary" %>
             <% end %>
+        </div>
+        <div class="image">
+            <%= image_tag("signup.svg", :alt => "people holding some balloons") %>
         </div>
     </div>
 </main>
+

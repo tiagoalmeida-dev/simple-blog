@@ -1,0 +1,76 @@
+@import '../base/tokens';
+@import '../base/mixins';
+
+.auth {
+  min-height: calc(100vh - 200px);
+  max-height: 100%;
+  display: flex;
+
+  &__title {
+    display: none;
+  }
+
+  &__form {
+
+    width: 100%;
+
+    p {
+      margin: 30px 0;
+      font-weight: $font-weight-semi-bold;
+      font-size: $font-size-title;
+      text-align: center;
+    }
+
+    input {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.image {
+  display: none;
+  margin-top: 50px;
+  height: 600px;
+  width: 100%;
+
+  > img {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+@include tablet {
+  .auth {
+    justify-content: center;
+
+    &__form {
+      margin-top: 20px;
+      max-width: 400px;
+    }
+  }
+}
+
+@include desktop {
+  .auth {
+
+    &__form {
+      width: 400px;
+
+      p {
+        font-size: 4em;
+        font-weight: $font-weight-medium;
+        text-align: left;
+      }
+    }
+
+    &__title {
+      display: block;
+      width: 700px;
+    }
+  }
+
+  .image {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
