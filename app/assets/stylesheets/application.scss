@@ -12,6 +12,27 @@
  *
  *= require_tree ./components
  *= require_tree ./styles
- *= require common
  *= require_self
  */
+
+@import './base/tokens';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Montserrat', serif;
+}
+
+body {
+    background-color: $light-color;
+}
+
+.container {
+    max-width: $default-screen-size;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: $default-font-size;
+}

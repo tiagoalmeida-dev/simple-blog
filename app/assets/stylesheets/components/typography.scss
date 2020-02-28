@@ -1,4 +1,6 @@
+@import '../base/_tokens.scss';
+
 .title {
   font-weight: 600;
-  font-size: 5.8em;
+  font-size: $font-size-title;
 }

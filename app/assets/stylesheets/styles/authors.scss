@@ -1,7 +1,7 @@
 @import '../base/mixins';
 
 .signup {
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 280px);
 
   &__container {
     display: flex;
@@ -10,7 +10,7 @@
   }
 
   &__title {
-    margin: 50px 0;
+    margin-bottom: 50px;
   }
 
   &__form {

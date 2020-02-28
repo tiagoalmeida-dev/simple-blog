@@ -11,7 +11,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 10px 0;
-		font-size: 8px;
+		font-size: $default-font-size;
 	}
 
 	&--alert {
@@ -20,9 +20,9 @@
 	}
 
 	&__text {
-		max-width: 1366px;
+		max-width: $default-screen-size;
 		padding: 0 20px;
-		font-size: 1.8em;
+		font-size: $font-size-3;
 		text-align: center;
 	}
 }
