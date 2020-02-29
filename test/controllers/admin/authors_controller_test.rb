@@ -17,7 +17,7 @@ class AuthorsControllerTest < ActionDispatch::IntegrationTest
                                             account_attributes: { email: "create@email.com", password: 'secret', password_confirmation: 'secret' } } }
     end
 
-    assert_redirected_to admin_author_url(Author.last)
+    assert_redirected_to admin_author_posts_url(Author.last)
   end
 
   test "should get edit" do

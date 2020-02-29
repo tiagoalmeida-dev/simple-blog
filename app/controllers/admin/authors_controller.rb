@@ -14,7 +14,8 @@ class Admin::AuthorsController < ApplicationController
     @author = Author.create(author_params)
 
     if @author.save
-      redirect_to admin_author_url(@author)
+      session[:account_id] = @author.account.id
+      redirect_to admin_author_posts_url(@author)
     else
       render :new
     end

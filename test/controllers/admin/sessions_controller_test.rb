@@ -10,7 +10,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     @account = accounts(:default)
     post admin_sessions_url, params: { email: @account.email, password: 'secret'}
 
-    assert_redirected_to root_url
+    assert_redirected_to admin_author_posts_url(@account.author)
   end
 
   test "should return a error message" do
