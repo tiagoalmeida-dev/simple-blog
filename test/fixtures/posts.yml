@@ -4,3 +4,13 @@ first:
   title: 'First post'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
   author: first
+
+second:
+  title: 'Second post'
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
+  author: second
+
+third:
+  title: 'Third post'
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
+  author: first
