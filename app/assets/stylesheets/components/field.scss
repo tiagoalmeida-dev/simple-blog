@@ -1,9 +1,20 @@
 @import '../base/tokens';
 
 .field {
-  border: 2px solid $dark-color;
-  border-radius: $default-raius;
-  font-weight: 500;
+    input {
+        display: block;
+        border: 2px solid $dark-color;
+        border-radius: $default-raius;
+        font-weight: 500;
+    }
+
+    &__error {
+        margin: 0.3em 0.5em;
+        font-weight: 600;
+        font-size: $font-size-1;
+        color: $alert-color;
+        text-transform: capitalize;
+    }
 }
 
 .field__text, .field__password {
@@ -13,4 +24,10 @@
   &::placeholder {
     color: $dark-color;
   }
+}
+
+.field_with_errors {
+    .field__text, .field__password {
+        border-color: $alert-color;
+    }
 }

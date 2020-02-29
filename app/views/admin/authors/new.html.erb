@@ -3,20 +3,41 @@
 
         <div class="auth__form">
 
-            <h1 class="auth__title title">Don't think to much, just write your dreams...</h1>
+            <h1 class="auth__title title title--lg">Don't think to much, just write your dreams...</h1>
+            <p class="title title--md">Sign up</p>
 
-            <p>Sign up</p>
             <%= form_with(model: @author, url: admin_authors_path, local: true, class: "form") do |author_form| %>
+                <div class="field">
+                    <%= author_form.text_field :name, class: "field__text", placeholder: "Name"  %>
+                    <% if !@author.errors["name"].empty? %>
+                        <p class="field__error"><%= @author.errors["name"].first %></p>
+                    <% end %>
 
-                <%= author_form.text_field :name, class: "field field__text", placeholder: "Name"  %>
+                </div>
 
                 <%= author_form.fields_for :account do |account_form| %>
-                    <%= account_form.text_field :email, class: "field field__text", placeholder: "Email" %>
-                    <%= account_form.password_field :password, class: "field field__password", placeholder: "Password" %>
-                    <%= account_form.password_field :password_confirmation, class: "field field__password", placeholder: "Confirm Password" %>
+                    <div class="field">
+                        <%= account_form.text_field :email, class: "field__text", placeholder: "Email" %>
+                        <% if !@author.errors["account.email"].empty? %>
+                            <p class="field__error"><%= @author.errors["account.email"].first %></p>
+                        <% end %>
+                    </div>
+                    <div class="field">
+                        <%= account_form.password_field :password, class: "field__password", placeholder: "Password" %>
+                        <% if !@author.errors["account.password"].empty? %>
+                            <p class="field__error"><%= @author.errors["account.password"].first %></p>
+                        <% end %>
+
+                    </div>
+                    <div class="field">
+                        <%= account_form.password_field :password_confirmation, class: "field__password", placeholder: "Confirm Password" %>
+                        <% if !@author.errors["account.password_confirmation"].empty? %>
+                            <p class="field__error"><%= @author.errors["account.password_confirmation"].first %></p>
+                        <% end %>
+                    </div>
                 <% end %>
 
-                <%= author_form.submit "Create", class: "button button--primary" %>
+                <%= author_form.submit "Create", class: "button button--block button--primary" %>
             <% end %>
         </div>
         <div class="image">

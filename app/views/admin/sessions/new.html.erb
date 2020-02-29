@@ -3,13 +3,17 @@
 
         <div class="auth__form">
 
-            <h1 class="auth__title title">Take a break and let's have a coffee...</h1>
+            <h1 class="auth__title title title--lg">Take a break and let's have a coffee...</h1>
+            <p class="title title--md">Login</p>
 
-            <p>Login</p>
             <%= form_with(url: admin_sessions_path, local: true, class: 'form') do |f| %>
-                    <%= f.text_field :email, class: 'field field__text', placeholder: 'Email' %>
-                    <%= f.password_field :password, class: 'field field__password', placeholder: 'Password' %>
-                    <%= f.submit "Enter", class: 'button button--primary' %>
+                <div class="field">
+                    <%= f.text_field :email, class: 'field__text', placeholder: 'Email' %>
+                </div>
+                <div class="field">
+                    <%= f.password_field :password, class: 'field__password', placeholder: 'Password' %>
+                </div>
+                <%= f.submit "Enter", class: 'button button--block button--primary' %>
             <% end %>
         </div>
         <div class="image">

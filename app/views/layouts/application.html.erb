@@ -12,13 +12,13 @@
   </head>
 
   <body>
-      <div class="message">
-        <% if flash.alert %>
-            <div class="message--alert">
-                <p class="message__text"><%= flash.alert %></p>
-            </div>
+       <% if flash.alert %>
+           <div class="message">
+               <div class="message--alert"
+                   <p class="message__text"><%= flash.alert %></p>
+               </div>
+           </div>
         <% end %>
-      </div>
       <menu class="menu">
           <div class="container">
               <p class="menu__brand">Coffee Break</p>

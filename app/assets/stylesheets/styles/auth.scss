@@ -11,20 +11,18 @@
   }
 
   &__form {
-
+    padding-bottom: 20px;
     width: 100%;
-
-    p {
-      margin: 30px 0;
-      font-weight: $font-weight-semi-bold;
-      font-size: $font-size-title;
-      text-align: center;
-    }
-
-    input {
-      margin-bottom: 20px;
-    }
   }
+}
+
+.title--md {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.field {
+    height: 70px;
 }
 
 .image {
@@ -48,29 +46,34 @@
       max-width: 400px;
     }
   }
+
+  .field {
+      height: 90px;
+  }
 }
 
 @include desktop {
-  .auth {
+    .auth {
+        &__form {
+            width: 400px;
+        }
 
-    &__form {
-      width: 400px;
+        &__title {
+            display: block;
+            width: 700px;
+        }
+    }
 
-      p {
-        font-size: 4em;
-        font-weight: $font-weight-medium;
+    .title--md {
         text-align: left;
-      }
     }
 
-    &__title {
-      display: block;
-      width: 700px;
+    .field {
+        height: 85px;
     }
-  }
 
-  .image {
-    display: flex;
-    justify-content: flex-end;
-  }
+    .image {
+        display: flex;
+        justify-content: flex-end;
+    }
 }

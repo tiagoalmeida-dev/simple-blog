@@ -1,6 +1,23 @@
 @import '../base/_tokens.scss';
+@import '../base/_mixins.scss';
 
 .title {
-  font-weight: 600;
-  font-size: $font-size-title;
+  &--md {
+      font-weight: $font-weight-medium;
+      font-size: $font-size-title;
+  }
+
+  &--lg {
+      font-weight: $font-weight-semi-bold;
+      font-size: $font-size-title;
+  }
+}
+
+@include desktop {
+    .title {
+        &--md {
+            font-size: 4em;
+            font-weight: $font-weight-medium;
+        }
+    }
 }
