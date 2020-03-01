@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2020_02_22_221338) do
     t.string "title", null: false
     t.text "body"
     t.integer "author_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_posts_on_author_id"
   end
 

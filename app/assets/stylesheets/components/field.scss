@@ -4,13 +4,13 @@
     input {
         display: block;
         border: 2px solid $dark-color;
-        border-radius: $default-raius;
-        font-weight: 500;
+        border-radius: $default-radius;
+        font-weight: $font-weight-medium;
     }
 
     &__error {
         margin: 0.3em 0.5em;
-        font-weight: 600;
+        font-weight: $font-weight-semi-bold;
         font-size: $font-size-1;
         color: $alert-color;
         text-transform: capitalize;

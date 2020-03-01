@@ -11,6 +11,10 @@
       font-weight: $font-weight-semi-bold;
       font-size: $font-size-title;
   }
+
+  &--em {
+      color: $primary-color;
+  }
 }
 
 @include desktop {

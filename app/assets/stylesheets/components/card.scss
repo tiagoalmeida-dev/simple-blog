@@ -1,0 +1,43 @@
+@import '../base/_tokens.scss';
+
+.card {
+    background-color: white;
+    min-height: 80px;
+    padding: 20px;
+    border-radius: $default-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+}
+
+.card__title {
+    max-width: 70%;
+    font-size: $font-size-5;
+    font-weight: $font-weight-medium;
+}
+
+.card__date {
+    font-size: $font-size-1;
+}
+
+.card__arrow {
+    width: 25px;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.card__actions {
+    margin-top: 20px;
+    a {
+        color: $primary-color;
+        font-size: $font-size-3;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+    }
+}

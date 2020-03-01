@@ -1,6 +1,34 @@
-<h1>Posts</h1>
-<ul>
-    <% for post in @posts do %>
-        <li><%= link_to post.title, admin_author_posts_url(post) %></li>
-    <% end %>
-</ul>
+<main class="posts container">
+    <h1 class="posts__title title title--lg">Posts</h1>
+
+    <div class="posts__wrapper">
+    <div class="posts__left">
+        <ul>
+            <% for post in @posts %>
+                <li>
+                    <div class="posts__card card">
+                        <div class="card__content">
+                            <div class="card__header">
+                                <p class="card__title"><%= post.title %></p>
+                                <%= image_tag("arrow-right.svg", alt: "a arrow facing to right", class: "card__arrow") %>
+                            </div>
+                            <div class="card__body">
+                                <p class="card__date"><%= post.created_at.strftime("%d %b, %Y") %></p>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <%= link_to "Delete", admin_author_post_path(current_author, post), method: :delete %>
+                        </div>
+                    </div>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="posts__right">
+        <div class="posts__new-button">
+            <%= link_to "New", new_admin_author_post_path(current_author), class: "button button--secondary" %>
+        </div>
+        <p class="posts__welcome title title--lg"> Hey <em class="title--em"><%= current_author.name %></em> welcome back, these are yours last posts.</p>
+    </div>
+    </div>
+</main>
