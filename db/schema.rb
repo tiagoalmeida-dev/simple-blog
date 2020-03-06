@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2020_02_22_221338) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "accounts", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "author_id"
+    t.bigint "author_id"
     t.index ["author_id"], name: "index_accounts_on_author_id"
     t.index ["email"], name: "index_accounts_on_email", unique: true
   end
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_02_22_221338) do
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
     t.text "body"
-    t.integer "author_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_posts_on_author_id"

@@ -11,19 +11,22 @@ Clone the project using git
 Run the command bellow to **install**
 
 ```
-bundle install
+docker-compose build
+docker-compose up
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
 ``` 
 
 To open the **project** run
 
 ```
-rails server
+docker-compose up
 ``` 
 
 To the **tests** run
 
 ```
-rails test
+docker-compose run web rails test
 ``` 
 
 ## License

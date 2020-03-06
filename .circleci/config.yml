@@ -3,13 +3,21 @@ jobs:
   test:
     working_directory: ~/repo
     docker:
-      - image: circleci/ruby:2.6.0-node
-
+      - image: circleci/ruby:2.6.5-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+          PGPASSWORD: postgres
+
+      - image: postgres
+        environment:
+          POSTGRES_DB: coffee_break_test 
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
     steps:
       - checkout
 
@@ -28,7 +36,8 @@ jobs:
           name: Bundle Install
           command: |
             gem install bundler
-            bundle install --path vendor/bundle
+            bundle config set path 'vendor/bundle'
+            bundle install
 
       - run:
           name: Install yarn dependencies
@@ -51,11 +60,12 @@ jobs:
             - ~/.cache/yarn
 
       - run:
-          name: Database Setup
-          command: |
-            bundle exec rake db:environment:set RAILS_ENV=test
-            bundle exec rake db:reset
-            bundle exec rake db:migrate
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Database setup
+          command: bin/rails db:schema:load --trace
 
       - run:
           name: Rails Test
