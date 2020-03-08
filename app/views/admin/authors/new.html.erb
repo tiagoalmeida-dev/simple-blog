@@ -7,8 +7,8 @@
             <p class="title title--md">Sign up</p>
 
             <%= form_with(model: @author, url: admin_authors_path, local: true, class: "form") do |author_form| %>
-                <div class="field">
-                    <%= author_form.text_field :name, class: "field__text", placeholder: "Name"  %>
+                <div class="field-group">
+                    <%= author_form.text_field :name, class: "field field__text", placeholder: "Name"  %>
                     <% if !@author.errors["name"].empty? %>
                         <p class="field__error"><%= @author.errors["name"].first %></p>
                     <% end %>
@@ -16,21 +16,21 @@
                 </div>
 
                 <%= author_form.fields_for :account do |account_form| %>
-                    <div class="field">
-                        <%= account_form.text_field :email, class: "field__text", placeholder: "Email" %>
+                    <div class="field-group">
+                        <%= account_form.text_field :email, class: "field field__text", placeholder: "Email" %>
                         <% if !@author.errors["account.email"].empty? %>
                             <p class="field__error"><%= @author.errors["account.email"].first %></p>
                         <% end %>
                     </div>
-                    <div class="field">
-                        <%= account_form.password_field :password, class: "field__password", placeholder: "Password" %>
+                    <div class="field-group">
+                        <%= account_form.password_field :password, class: "field field__password", placeholder: "Password" %>
                         <% if !@author.errors["account.password"].empty? %>
                             <p class="field__error"><%= @author.errors["account.password"].first %></p>
                         <% end %>
 
                     </div>
-                    <div class="field">
-                        <%= account_form.password_field :password_confirmation, class: "field__password", placeholder: "Confirm Password" %>
+                    <div class="field-group">
+                        <%= account_form.password_field :password_confirmation, class: "field field__password", placeholder: "Confirm Password" %>
                         <% if !@author.errors["account.password_confirmation"].empty? %>
                             <p class="field__error"><%= @author.errors["account.password_confirmation"].first %></p>
                         <% end %>

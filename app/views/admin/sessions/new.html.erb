@@ -7,11 +7,11 @@
             <p class="title title--md">Login</p>
 
             <%= form_with(url: admin_sessions_path, local: true, class: 'form') do |f| %>
-                <div class="field">
-                    <%= f.text_field :email, class: 'field__text', placeholder: 'Email' %>
+                <div class="field-group">
+                    <%= f.text_field :email, class: 'field field__text', placeholder: 'Email' %>
                 </div>
-                <div class="field">
-                    <%= f.password_field :password, class: 'field__password', placeholder: 'Password' %>
+                <div class="field-group">
+                    <%= f.password_field :password, class: 'field field__password', placeholder: 'Password' %>
                 </div>
                 <%= f.submit "Enter", class: 'button button--block button--primary' %>
             <% end %>

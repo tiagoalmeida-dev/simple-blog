@@ -1,14 +1,15 @@
-<h1>Post</h1>
-<%= form_with(model: [current_author, @post],url: admin_author_posts_path, local: true) do |f| %>
-    <div class=”field”>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-    </div>
-    <div class=”field”>
-        <%= f.label :body %>
-        <%= f.text_area :body %>
-    </div>
-    <div class=”actions”>
-        <%= f.submit "Save" %>
-    </div>
-<% end %>
+<main class="container post-form">
+    <%= form_with(model: [current_author, @post],url: admin_author_posts_path, local: true, class: "form") do |f| %>
+        <div class="post-form__header">
+            <div class="field-group field-group--paper">
+                <%= f.text_area :title, class: "field field--paper field__title", placeholder: "Every post begins with a title..."%>
+            </div>
+            <div class="post-form__actions">
+                <%= f.submit "Write", class: "button button--secondary" %>
+            </div>
+        </div>
+        <div class="field-group field-group--paper">
+            <%= f.text_area :body, class: "field field--paper field__text-area", placeholder: "Write your body..." %>
+        </div>
+    <% end %>
+</main>

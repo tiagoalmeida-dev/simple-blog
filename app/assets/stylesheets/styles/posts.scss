@@ -1,4 +1,5 @@
 @import '../base/_mixins.scss';
+@import '../base/_tokens.scss';
 
 .posts {
     min-height: calc(100vh - 200px);
@@ -40,5 +41,47 @@
 
     .posts__welcome {
         max-width: 500px;
+    }
+}
+
+
+.post-form {
+    min-height: calc(100vh - 200px);
+    .field__text-area {
+        padding: 2em 40px;
+        min-height: calc(100vh - 440px);
+    }
+
+    &__header {
+        display: flex;
+        background: white;
+        flex-direction: column;
+    }
+
+    &__actions {
+        padding: 10px 40px;
+    }
+}
+
+@include desktop {
+    .post-form {
+        .field__text-area {
+            min-height: calc(100vh - 420px);
+        }
+
+        .field__title{
+            height: 60px;
+            padding: 1em 40px;
+        }
+
+        &__header {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__actions {
+            padding: 20px 40px;
+            width: 10%;
+        }
     }
 }
