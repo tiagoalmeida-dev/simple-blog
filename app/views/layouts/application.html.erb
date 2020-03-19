@@ -12,17 +12,25 @@
   </head>
 
   <body>
-       <% if flash.alert %>
-           <div class="message">
-               <div class="message--alert"
-                   <p class="message__text"><%= flash.alert %></p>
-               </div>
-           </div>
-        <% end %>
+      <% if flash.alert %>
+          <div class="message">
+              <div class="message--alert"
+                  <p class="message__text"><%= flash.alert %></p>
+              </div>
+          </div>
+      <% end %>
       <menu class="menu">
           <div class="container">
               <p class="menu__brand">Coffee Break</p>
-              <a href="https://github.com/wnascy/coffee-break" class="button button--primary">Github</a>
+              <% if logged_in?  %>
+                  <div>
+                      <%= link_to 'My Posts', admin_author_posts_path(current_author), class: 'menu__link link' %>
+                      <%= link_to 'Profile', admin_author_path(current_author), class: 'menu__link link' %>
+                      <%= link_to 'Logout', logout_path, class: 'menu__link link' %>
+                  </div>
+              <% else %>
+                  <a href="https://github.com/wnascy/coffee-break" class="button button--primary">Github</a>
+              <% end %>
           </div>
       </menu>
       <%= yield %>

@@ -19,6 +19,6 @@ class Admin::SessionsController < ApplicationController
 
   def destroy
     session[:account_id] = nil
-    redirect_to root_url
+    redirect_to login_url
   end
 end
