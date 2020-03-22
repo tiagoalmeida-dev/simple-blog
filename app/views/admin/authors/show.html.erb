@@ -3,7 +3,7 @@
         <div class="author__header">
             <div>
                 <div class="author__circle">
-                    <img alt="author image" src="https://avatars3.githubusercontent.com/u/12303580?s=460&u=3af0090957164cbabeaa8cbc48350a15371c0098&v=4" class="author__image" />
+                    <%= image_tag(load_author_avatar(@author.account.email), alt: "author image", class: "author__image") %>
                 </div>
             </div>
             <div class="author__name">
