@@ -1,0 +1,21 @@
+@import '../base/tokens';
+
+.post {
+    margin-bottom: 40px;
+
+    &__title {
+        font-size: $font-size-5;
+        font-weight: $font-weight-medium;
+    }
+
+    &__body {
+        font-size: $font-size-3;
+        line-height: 1.5em;
+        margin: 20px 0;
+        text-align: justify;
+    }
+
+    &__date {
+        font-size: $font-size-2;
+    }
+}

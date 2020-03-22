@@ -7,6 +7,10 @@ class Admin::AuthorsController < ApplicationController
     @author.build_account
   end
 
+  def show
+    @posts = Post.with_author(params[:id])
+  end
+
   def edit
   end
 

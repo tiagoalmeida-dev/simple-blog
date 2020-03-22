@@ -2,19 +2,27 @@
 @import '../base/_mixins.scss';
 
 .title {
-  &--md {
-      font-weight: $font-weight-medium;
-      font-size: $font-size-title;
-  }
+    &--sm {
+        font-size: $font-size-title-sm;
+    }
 
-  &--lg {
-      font-weight: $font-weight-semi-bold;
-      font-size: $font-size-title;
-  }
+    &--md {
+        font-weight: $font-weight-medium;
+        font-size: $font-size-title;
+    }
 
-  &--em {
-      color: $primary-color;
-  }
+    &--lg {
+        font-weight: $font-weight-semi-bold;
+        font-size: $font-size-title;
+    }
+
+    &--em {
+        color: $primary-color;
+    }
+
+    &--bold {
+        font-weight: $font-weight-bold;
+    }
 }
 
 @include desktop {
