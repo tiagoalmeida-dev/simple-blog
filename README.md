@@ -1,7 +1,5 @@
 ## Coffee Break
 
-[![CircleCI](https://circleci.com/gh/wnascy/coffee-break/tree/master.svg?style=svg)](https://circleci.com/gh/wnascy/coffee-break/tree/master)
-
 This a blog to you share content for free. 
 
 ### How to contribute
