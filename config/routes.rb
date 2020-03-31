@@ -1,7 +1,7 @@
 # coding: utf-8
 Rails.application.routes.draw do
 
-  root 'home#index'
+  root 'feed#index'
 
   namespace :admin do
     resources :sessions, only: [:new, :create, :destroy]

@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class FeedController < ApplicationController
   skip_before_action :authorized, only: [:index]
 
   def index
