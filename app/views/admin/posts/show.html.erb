@@ -1,16 +1,25 @@
-<p id="notice"><%= notice %></p>
+<main class="post">
+    <div class="container">
+        <div class="author__header">
+            <div>
+                <div class="author__circle author__circle--sm">
+                    <%= image_tag(load_author_avatar(@post.author.account.email), alt: "author image", class: "author__image author__image--sm") %>
+                </div>
+            </div>
+            <div class="author__name author__name--sm">
+                <p><%= @post.author.name %></p>
+            </div>
+        </div>
 
-<p>
-    <strong>Title:</strong>
-    <%= @post.title %>
-</p>
+        <div class="post__header">
+            <h1 class="post__title title--lg"><%= @post.title %></h1>
+            <div class="post__information">
+                <p class="post__date"><%= pretty_date(@post.created_at) %></p>
+            </div>
+        </div>
 
-<p>
-    <strong>Body:</strong>
-    <%= @post.body %>
-</p>
-
-<p>
-    <strong>Author:</strong>
-    <%= @post.author.name %>
-</p>
+        <article class="post__body">
+            <%= @post.body %>
+        </article>
+    </div>
+</main>

@@ -1,6 +1,6 @@
 @import '../base/tokens';
 
-.post {
+.post-item {
     margin-bottom: 40px;
 
     &__title {
@@ -12,6 +12,30 @@
         font-size: $font-size-3;
         line-height: 1.5em;
         margin: 20px 0;
+        text-align: justify;
+    }
+
+    &__date {
+        font-size: $font-size-2;
+    }
+}
+
+.post {
+    min-height: calc(100vh - 240px);
+    margin-bottom: 40px;
+
+    &__title {
+        max-width: 750px;
+        font-size: $font-size-5;
+        font-weight: $font-weight-medium;
+        margin: 20px 0;
+    }
+
+    &__body {
+        font-size: $font-size-3;
+        line-height: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 20px;
         text-align: justify;
     }
 
