@@ -1,9 +1,10 @@
 # coding: utf-8
 Rails.application.routes.draw do
 
-  root 'feed#index'
+  root 'posts#index'
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:index, :show]
+  resources :authors, only: [:show]
 
   namespace :admin do
     resources :authors, except: [:index] do
@@ -12,6 +13,6 @@ Rails.application.routes.draw do
   end
 
   get 'signup', to: 'admin/authors#new', as: 'signup'
-  get 'login',  to: 'auth#new', as: 'login'
-  get 'logout', to: 'auth#destroy', as: 'logout'
+  get 'login',  to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 end
