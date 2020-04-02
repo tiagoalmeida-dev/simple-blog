@@ -11,11 +11,6 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get a post" do
-    get admin_author_post_url(@post.author, @post)
-    assert_response :success
-  end
-
   test "should get a new post" do
     get new_admin_author_post_url(@post.author)
     assert_response :success
@@ -51,5 +46,4 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to admin_author_posts_url(@post.author)
   end
-
 end

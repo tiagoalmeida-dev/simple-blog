@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'feed#index'
   resources :sessions, only: [:new, :create, :destroy]
+  resources :posts, only: [:index, :show]
 
   namespace :admin do
     resources :authors, except: [:index] do

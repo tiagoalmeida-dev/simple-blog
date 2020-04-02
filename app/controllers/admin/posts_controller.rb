@@ -1,11 +1,8 @@
 class Admin::PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.with_author(current_author.id)
-  end
-
-  def show
   end
 
   def new
