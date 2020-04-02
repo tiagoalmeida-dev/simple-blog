@@ -1,4 +1,4 @@
-class Admin::SessionsController < ApplicationController
+class SessionsController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
 
   def new

@@ -6,7 +6,7 @@
             <h1 class="auth__title title title--lg">Take a break and let's have a coffee...</h1>
             <p class="title title--md">Login</p>
 
-            <%= form_with(url: admin_sessions_path, local: true, class: 'form') do |f| %>
+            <%= form_with(url: auth_path, local: true, class: 'form') do |f| %>
                 <div class="field-group">
                     <%= f.text_field :email, class: 'field field__text', placeholder: 'Email' %>
                 </div>
