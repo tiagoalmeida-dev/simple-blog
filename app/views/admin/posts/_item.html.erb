@@ -1,5 +1,5 @@
 <div class="post-item">
-    <p class="post-item__title"><%= post.title %></p>
+    <%= link_to post.title, post_path(post), class: "post-item__title" %>
     <p class="post-item__body"><%= limit_text(post.body) %></p>
     <p class="post-item__date"><%= pretty_date(post.created_at) %></p>
 </div>

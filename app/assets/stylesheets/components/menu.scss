@@ -20,4 +20,9 @@
     font-size: $font-size-5;
     font-weight: bold;
     color: $dark-font-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-color;
+    }
 }

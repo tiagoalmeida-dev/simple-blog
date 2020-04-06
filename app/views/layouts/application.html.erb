@@ -21,7 +21,7 @@
       <% end %>
       <menu class="menu">
           <div class="container">
-              <p class="menu__brand">Coffee Break</p>
+              <%= link_to "Coffee Break", posts_path, class: "menu__brand" %>
               <% if logged_in?  %>
                   <div>
                       <%= link_to 'My Posts', admin_author_posts_path(current_author), class: 'menu__link link' %>
