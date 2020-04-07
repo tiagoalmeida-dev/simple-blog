@@ -19,7 +19,7 @@
         </div>
 
         <article class="post__body">
-            <%= @post.body %>
+            <%= render_markdown(@post.body) %>
         </article>
     </div>
 </main>

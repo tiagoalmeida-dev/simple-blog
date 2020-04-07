@@ -15,10 +15,7 @@
             height: 100%;
             border-radius: 0px;
             border: none;
-
-            &::placeholder {
-                color: $gray-color;
-            }
+            color: $gray-color;
         }
     }
 
@@ -41,6 +38,7 @@
 .field__title {
   font-size: $font-size-3;
   padding: 1em;
+  resize: none;
 
   &::placeholder {
     color: $dark-color;

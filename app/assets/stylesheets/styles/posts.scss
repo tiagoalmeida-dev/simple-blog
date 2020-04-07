@@ -46,12 +46,14 @@
 
 
 .post-form {
-    min-height: calc(100vh - 200px);
 
     .field__text-area {
         padding: 2em 40px;
-        min-height: calc(100vh - 440px);
+        min-height: 100vh;
         outline: none;
+        white-space: pre-wrap;
+        font-size: $font-size-4;
+        letter-spacing: 0.1em;
     }
 
     .field__title {
