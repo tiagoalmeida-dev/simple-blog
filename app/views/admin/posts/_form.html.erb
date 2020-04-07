@@ -9,7 +9,10 @@
             </div>
         </div>
         <div class="field-group field-group--paper">
-            <%= f.text_area :body, class: "field field--paper field__text-area", placeholder: "Write your body..." %>
+            <div class="coffpad-buttons" id="coffpad-buttons" />
+        </div>
+        <div class="field-group field-group--paper">
+            <%= f.text_area :body, class: "field field--paper field__text-area", id: "coffpad", placeholder: "Write your body..." %>
         </div>
     <% end %>
 </main>
