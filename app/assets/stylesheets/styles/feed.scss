@@ -1,5 +1,5 @@
 .feed {
-    height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
 
     &__title {
         margin-bottom: 40px;

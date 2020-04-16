@@ -1,0 +1,52 @@
+@import "../base/tokens";
+
+.article {
+
+    > h2 {
+        font-size: $font-size-4;
+        font-weight: $font-weight-medium;
+        margin: 40px 0 20px 0;
+    }
+
+    > p {
+        margin-bottom: 40px;
+        line-height: 1.7em;
+        font-size: $font-size-1;
+    }
+
+    > strong {
+        font-weight: 500;
+    }
+
+    > em {
+        font-style: italic;
+    }
+
+    > ul {
+        margin-left: 18px;
+        margin-bottom: 40px;
+    }
+
+    > blockquote {
+        border-left: 4px solid $primary-color;
+        padding-left: 20px;
+        color: $gray-color;
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+
+    > pre {
+        display: flex;
+        widht: 100%;
+        margin-bottom: 40px;
+    }
+
+    code {
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+        font-family: monospace;
+        background: $dark-color;
+        color: $light-color;
+    }
+}

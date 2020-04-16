@@ -1,5 +1,3 @@
-require 'redcarpet'
-
 module PostsHelper
 
   def pretty_date(date)
@@ -15,8 +13,8 @@ module PostsHelper
   end
 
   def render_markdown(text)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
-    sanitize markdown.render(text)
+    options = [:hard_wrap, :autolink, :tables, :fenced_code_blocks, :strikethrough]
+    Markdown.new(text, *options).to_html.html_safe
   end
 
 end
