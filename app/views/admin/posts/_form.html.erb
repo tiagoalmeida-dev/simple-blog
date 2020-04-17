@@ -2,18 +2,18 @@
 <main class="container post-form">
     <%= form_with(model: [current_author, @post], url: admin_author_posts_path, local: true, class: "form") do |f| %>
         <div class="post-form__header">
-            <div class="field-group field-group--paper">
-                <%= f.text_area :title, class: "field field--paper field__title", placeholder: "Every post begins with a title..."%>
+            <div class="field-group post-form__group">
+                <%= f.text_field :title, class: "field field__title", placeholder: "Every post begins with a title..."%>
             </div>
             <div class="post-form__actions">
                 <%= f.submit "Write", class: "button button--secondary" %>
             </div>
         </div>
-        <div class="field-group field-group--paper">
+        <div class="field-group">
             <div class="coffpad-buttons" id="coffpad-buttons" />
         </div>
-        <div class="field-group field-group--paper">
-            <%= f.text_area :body, class: "field field--paper field__text-area", id: "coffpad", placeholder: "Write your body..." %>
+        <div class="field-group">
+            <%= f.text_area :body, class: "field field__text-area", id: "coffpad", placeholder: "Write your body..." %>
         </div>
     <% end %>
 </main>

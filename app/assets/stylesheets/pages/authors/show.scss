@@ -1,7 +1,5 @@
-@import '../base/tokens';
-
 .author {
-    min-height: calc(100vh - 200px);
+    min-height: $default-min-height;
     max-height: 100%;
 
     &__header {

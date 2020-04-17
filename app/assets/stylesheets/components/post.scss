@@ -1,11 +1,17 @@
-@import '../base/tokens';
-
 .post-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
     margin-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    &__action {
+        text-decoration: none;
+    }
 
     &__title {
         text-decoration: none;
-        color: $dark-font-color;
+        color: $primary-color;
         font-size: $font-size-5;
         font-weight: $font-weight-medium;
 
@@ -24,10 +30,14 @@
     &__date {
         font-size: $font-size-2;
     }
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
 }
 
 .post {
-    min-height: calc(100vh - 240px);
+    min-height: $default-min-height;
     margin-bottom: 40px;
 
     &__title {

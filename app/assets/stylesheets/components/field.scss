@@ -1,6 +1,3 @@
-@import '../base/_tokens.scss';
-@import '../base/_mixins.scss';
-
 .field-group {
     display: flex;
     flex-direction: column;
@@ -10,13 +7,6 @@
         border: 2px solid $dark-color;
         border-radius: $default-radius;
         font-weight: $font-weight-medium;
-
-        &--paper {
-            height: 100%;
-            border-radius: 0px;
-            border: none;
-            color: $gray-color;
-        }
     }
 
     &__error {
@@ -25,10 +15,6 @@
         font-size: $font-size-1;
         color: $alert-color;
         text-transform: capitalize;
-    }
-
-    &--paper{
-        width: 100%;
     }
 }
 
@@ -39,25 +25,15 @@
   font-size: $font-size-3;
   padding: 1em;
   resize: none;
+  outline: none;
 
   &::placeholder {
     color: $dark-color;
   }
 }
 
-.field__title {
-    padding: 1.5em;
-    font-size: $font-size-title-sm;
-}
-
 .field_with_errors {
     .field__text, .field__password {
         border-color: $alert-color;
-    }
-}
-
-@include desktop {
-    .field__title {
-        font-size: $font-size-title;
     }
 }

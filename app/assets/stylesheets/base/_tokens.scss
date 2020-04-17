@@ -1,8 +1,9 @@
 $dark-color: #191919;
-$gray-color: #4c4c4c;
-$light-color: #F9F9F9;
+$gray-color: hsl(0, 0%, 30%);
+$light-color: #FFF;
 $primary-color: #5B22FF;
 $alert-color: #FF5252;
+$secondary-color: #5B22FF;
 
 $dark-font-color: $dark-color;
 $light-font-color: $light-color;
@@ -25,3 +26,5 @@ $font-size-title: 4.8em;
 $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 $font-weight-bold: bold;
+
+$default-min-height:  calc(100vh - 220px);

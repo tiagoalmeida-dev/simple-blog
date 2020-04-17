@@ -33,8 +33,8 @@ document.addEventListener("turbolinks:load", () => {
     const createIconBySchema = (schema) => {
         const icon = document.createElement("img");
         icon.src = schema.icon;
-        icon.style.height = "20px";
-        icon.style.width = "20px";
+        icon.style.height = "15px";
+        icon.style.width = "15px";
         return icon;
     };
 
