@@ -11,13 +11,23 @@
 
     &--primary {
         background: $primary-button-bg-color;
-        color: $light-font-color
+        color: $light-font-color;
+
+        &:hover {
+            color: $primary-button-bg-color;
+            background: $light-font-color
+        }
     }
 
     &--secondary {
         border-color: $primary-color;
         background: white;
         color: $primary-color;
+
+        &:hover {
+            background: $primary-color;
+            color: $light-font-color
+        }
     }
 
     &--block{
