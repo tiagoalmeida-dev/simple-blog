@@ -2,6 +2,13 @@
   min-height: $default-min-height;
 
   &__title {
-      margin-bottom: 40px;
+    margin: 0 auto;
+    width: 800px;
+      margin-bottom: 20px;
+      text-align: center;
   }
+}
+
+.hero {
+ margin-bottom: 70px;
 }

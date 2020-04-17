@@ -11,7 +11,6 @@
 
     &__title {
         text-decoration: none;
-        color: $primary-color;
         font-size: $font-size-6;
         font-weight: $font-weight-medium;
 
@@ -44,6 +43,10 @@
         font-size: $font-size-title;
         font-weight: $font-weight-medium;
         margin: 50px 0 20px -3px;
+    }
+
+    &__header {
+        margin-bottom: 40px;
     }
 
     &__body {

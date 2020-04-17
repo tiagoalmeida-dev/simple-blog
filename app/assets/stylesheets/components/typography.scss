@@ -1,4 +1,9 @@
 .title {
+    
+    &--xs {
+        font-size: $font-size-6;
+    }
+
     &--sm {
         font-size: $font-size-title-sm;
     }
