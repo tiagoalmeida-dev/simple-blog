@@ -10,7 +10,6 @@
                 <p><%= @author.name %></p>
             </div>
         </div>
-        <p class="author__posts title--sm title--bold">My Articles</p>
         <% for post in @posts %>
             <%= render 'admin/posts/item', post: post %>
         <% end %>

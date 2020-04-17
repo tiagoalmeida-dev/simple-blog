@@ -14,6 +14,19 @@
         margin-bottom: 5px;
     }
 
+    &__content {
+        &:hover {
+            cursor: pointer;
+            .card__title {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
@@ -25,10 +38,6 @@
     font-weight: $font-weight-medium;
     text-decoration: none;
     color: $dark-font-color;
-
-    &:hover {
-        color: $primary-color;
-    }
 }
 
 .card__date {
