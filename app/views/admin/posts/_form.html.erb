@@ -1,4 +1,3 @@
-<%= javascript_pack_tag 'coffpad', 'data-turbolinks-track': 'reload' %>
 <main class="container post-form">
     <%= form_with(model: [current_author, @post], url: admin_author_posts_path, local: true, class: "form") do |f| %>
         <div class="post-form__header">
@@ -17,3 +16,4 @@
         </div>
     <% end %>
 </main>
+<%= javascript_pack_tag 'coffpad', 'data-turbolinks-track': 'reload' %>

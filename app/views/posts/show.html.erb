@@ -2,11 +2,11 @@
     <div class="container">
         <div class="author__header">
             <div>
-                <div class="author__circle author__circle--sm">
-                    <%= image_tag(load_author_avatar(@post.author.account.email), alt: "author image", class: "author__image author__image--sm") %>
+                <div class="author__circle author__circle">
+                    <%= image_tag(load_author_avatar(@post.author.account.email), alt: "author image", class: "author__image author__image") %>
                 </div>
             </div>
-            <div class="author__name author__name--sm">
+            <div class="author__name author__name">
                 <p><%= @post.author.name %></p>
             </div>
         </div>
