@@ -1,0 +1,38 @@
+.item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: $margin-5;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    &__action {
+        text-decoration: none;
+    }
+
+    &__title {
+        text-decoration: none;
+        font-size: $font-size-6;
+        font-weight: $font-weight-medium;
+        color: $dark-font-color;
+    }
+
+    &__body {
+        font-size: $font-size-3;
+        line-height: $line-height-1;
+        margin: $margin-3 0;
+        text-align: justify;
+        color: $gray-color;
+    }
+
+    &__date {
+        font-size: $font-size-2;
+        color: $gray-color;
+    }
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        .item__title {
+            color: $primary-color;
+        }
+    }
+}

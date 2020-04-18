@@ -2,21 +2,23 @@
 @import './base/mixins';
 
 @import './components/button';
+@import './components/item';
 @import './components/card';
 @import './components/field';
 @import './components/footer';
 @import './components/link';
 @import './components/menu';
 @import './components/message';
-@import './components/post';
 @import './components/typography';
 @import './components/article';
 @import './components/coffpad';
+@import './components/hero';
 
 @import './pages/admin/posts/form';
 @import './pages/admin/posts/index';
 @import './pages/sessions/auth';
 @import './pages/posts/index';
+@import './pages/posts/show';
 @import './pages/authors/show';
 
 * {
@@ -26,7 +28,6 @@
     font-size: 100%;
     font: inherit;
     font-family: 'Montserrat', serif;
-    color: $dark-font-color;
 }
 
 body {

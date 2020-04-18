@@ -1,5 +1,5 @@
 $dark-color: #191919;
-$gray-color: hsl(0, 0%, 30%);
+$gray-color: #666;
 $light-color: #FFF;
 $primary-color: #5B22FF;
 $alert-color: #FF5252;
@@ -11,7 +11,7 @@ $light-font-color: $light-color;
 $primary-button-bg-color: $dark-color;
 
 $default-font-size: 10px;
-$default-screen-size: 1100px;
+$default-screen-size: 1024px;
 $default-radius: 5px;
 
 $font-size-1: 1.2em;
@@ -29,3 +29,12 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: bold;
 
 $default-min-height:  calc(100vh - 220px);
+
+$line-height-1: 1.5em;
+$line-height-2: 1.8em;
+
+$margin-1: 10px;
+$margin-2: 16px;
+$margin-3: 20px;
+$margin-4: 30px;
+$margin-5: 40px;

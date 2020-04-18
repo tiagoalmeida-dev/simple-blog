@@ -1,6 +1,6 @@
 .card {
-    background-color: white;
-    min-height: 80px;
+    background-color: $light-color;
+    min-height: 100px;
     padding: 20px;
     border-radius: $default-radius;
     display: flex;
@@ -36,22 +36,23 @@
     max-width: 70%;
     font-size: $font-size-5;
     font-weight: $font-weight-medium;
-    text-decoration: none;
     color: $dark-font-color;
+    text-decoration: none;
 }
 
 .card__date {
     font-size: $font-size-1;
+    color: $dark-font-color;
 }
 
 .card__arrow {
     width: 25px;
     align-self: flex-start;
-    margin-top: 10px;
+    margin-top: $margin-1;
 }
 
 .card__actions {
-    margin-top: 20px;
+    margin-top: $margin-2;
     a {
         color: $primary-color;
         font-size: $font-size-3;

@@ -3,11 +3,11 @@
 }
 
 .posts__title {
-    margin-bottom: 20px;
+    margin-bottom: $margin-2;
 }
 
 .posts__left {
-    margin-bottom: 20px;
+    margin-bottom: $margin-2;
     ul {
         list-style: none;
     }
@@ -18,7 +18,7 @@
 }
 
 .posts__card {
-    margin-bottom: 20px;
+    margin-bottom: $margin-5;
 }
 
 @include desktop {
@@ -33,7 +33,7 @@
     }
 
     .posts__new-button {
-        margin-bottom: 40px;
+        margin-bottom: $margin-5;
     }
 
     .posts__welcome {

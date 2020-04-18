@@ -1,0 +1,19 @@
+.post {
+  min-height: $default-min-height;
+  margin-bottom: $margin-5;
+
+  &__title {
+      font-size: $font-size-title;
+      font-weight: $font-weight-bold;
+      margin: 50px 0 $margin-3 -3px;
+  }
+
+  &__header {
+      margin-bottom: $margin-5;
+  }
+
+  &__date {
+      font-size: $font-size-3;
+      font-weight: 500;
+  }
+}

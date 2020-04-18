@@ -1,10 +1,8 @@
-@import '../base/tokens';
-
 .coffpad-buttons {
-    background: white;
+    background: $light-color;
 
     button {
-        background: white;
+        background: $light-color;
         padding: 10px 15px 10px 0;
         font-size: $font-size-1;
         font-weight: bold;

@@ -17,14 +17,14 @@
     }
 
     &__link {
-        margin-left: 10px;
+        margin-left: $margin-1;
         color: $dark-color;
     }
 }
 
 .menu__brand {
-    font-size: $font-size-5;
-    font-weight: bold;
+    font-size: $font-size-6;
+    font-weight: $font-weight-bold;
     color: $secondary-color;
     text-decoration: none;
 

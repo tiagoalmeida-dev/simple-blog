@@ -1,7 +1,7 @@
-<div class="post-item">
-    <%= link_to post_path(post), class: "post-item__action", action: 'go' do %>
-        <h3 class="post-item__title"> <%= post.title %></h3>
-        <p class="post-item__body"><%= limit_text(post.body) %></p>
-        <p class="post-item__date"><%= pretty_date(post.created_at) %></p>
+<div class="item">
+    <%= link_to post_path(post), class: "item__action", action: 'go' do %>
+        <h3 class="item__title"> <%= post.title %></h3>
+        <p class="item__body"><%= limit_text(post.body) %></p>
+        <p class="item__date"><%= pretty_date(post.created_at) %></p>
     <% end %>
 </div>

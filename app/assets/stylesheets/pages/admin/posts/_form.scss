@@ -4,12 +4,14 @@
       white-space: pre-wrap;
       border: none;
       padding: 20px 0;
+      font-size: $font-size-5;
+      line-height: $line-height-2;
   }
 
   .field__title{
     border: none;
-    padding: 10px 0;
-    font-size: $font-size-4;
+    padding: 30px 0;
+    font-size: $font-size-title-sm;
   }
 
   &__group {
@@ -18,7 +20,7 @@
 
   &__header {
       display: flex;
-      background: white;
+      background: $light-color;
       flex-direction: column;
       justify-content: space-between;
   }

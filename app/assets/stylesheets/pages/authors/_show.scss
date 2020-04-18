@@ -5,7 +5,7 @@
     &__header {
         display: flex;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: $margin-5;
     }
 
     &__circle {
@@ -28,7 +28,7 @@
     &__name {
         font-size: $font-size-6;
         font-weight: $font-weight-semi-bold;
-        padding: 0 20px;
+        padding: 0 $margin-2;
 
         &--sm {
             font-size: $font-size-5;

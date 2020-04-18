@@ -5,40 +5,43 @@
     > h2 {
         font-size: $font-size-4;
         font-weight: $font-weight-medium;
-        margin: 40px 0 20px 0;
+        margin: $margin-4 0 $margin-3 0;
     }
 
     > p {
-        margin-bottom: 40px;
-        line-height: 1.7em;
-        font-size: $font-size-4;
+        margin-bottom: $margin-4;
+        line-height: $line-height-2;
+        font-size: $font-size-5;
     }
 
-    > strong {
-        font-weight: 500;
+    strong {
+        font-weight: $font-weight-bold;
     }
 
-    > em {
+    em {
         font-style: italic;
     }
 
     > ul {
         margin-left: 18px;
-        margin-bottom: 40px;
+        margin-bottom: $margin-4;
     }
 
     > blockquote {
         border-left: 4px solid $primary-color;
         padding-left: 20px;
         color: $gray-color;
-        font-size: 1em;
-        margin-bottom: 40px;
+        font-size: $font-size-5;
+        margin-bottom: $margin-4;
+        line-height: $line-height-2;
     }
 
     > pre {
         display: flex;
-        widht: 100%;
-        margin-bottom: 40px;
+        width: 100%;
+        font-size: $font-size-5;
+        margin-bottom: $margin-4;
+        line-height: $line-height-2;
     }
 
     code {

@@ -14,7 +14,7 @@
   <body>
       <% if flash.alert %>
           <div class="message">
-              <div class="message--alert"
+              <div class="message--alert">
                   <p class="message__text"><%= flash.alert %></p>
               </div>
           </div>
@@ -24,7 +24,7 @@
               <%= link_to "Coffee Break", posts_path, class: "menu__brand" %>
               <% if logged_in?  %>
                   <div>
-                      <%= link_to 'My Posts', admin_author_posts_path(current_author), class: 'menu__link link' %>
+                      <%= link_to 'Dashboard', admin_author_posts_path(current_author), class: 'menu__link link' %>
                       <%= link_to 'Profile', admin_author_path(current_author), class: 'menu__link link' %>
                       <%= link_to 'Logout', logout_path, class: 'menu__link link' %>
                   </div>
