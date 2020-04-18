@@ -42,14 +42,15 @@
         font-size: $font-size-5;
         margin-bottom: $margin-4;
         line-height: $line-height-2;
+        background: $dark-color;
+        border-radius: 5px;
+        overflow: scroll;
     }
 
     code {
         width: 100%;
-        border-radius: 5px;
-        padding: 20px;
+        margin: 20px;
         font-family: monospace;
-        background: $dark-color;
         color: $light-color;
     }
 }
