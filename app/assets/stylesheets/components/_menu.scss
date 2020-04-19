@@ -9,6 +9,17 @@
         align-items: center;
     }
 
+    .navbar {
+        display: flex;
+        list-style: none;
+    }
+
+    .active {
+        .menu__link {
+            color: $primary-color;
+        }
+    }
+
     &__container {
         height: 100%;
         display: flex;
