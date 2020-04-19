@@ -21,19 +21,19 @@ class AuthorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
-    get edit_admin_author_url(@author)
+    get edit_admin_author_url(@author), params: { id: @author.id }
     assert_response :success
   end
 
   test "should update author" do
     patch admin_author_url(@author), params: { author: { name: @author.name,
-                                                   account_attributes: { email: "new@email.com", password: 'secret', password_confirmation: 'secret' } } }
+                                                   account_attributes: { email: "new@email.com", password: 'secret', password_confirmation: 'secret' } }, id: @author.id  }
     assert_redirected_to admin_author_url(@author)
   end
 
   test "should destroy author" do
     assert_difference('Author.count', -1) do
-      delete admin_author_url(@author)
+      delete admin_author_url(@author), params: {id: @author.id}
     end
 
     assert_redirected_to new_admin_author_url

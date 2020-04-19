@@ -25,7 +25,7 @@
               <% if logged_in?  %>
                   <div>
                       <%= link_to 'Dashboard', admin_author_posts_path(current_author), class: 'menu__link link' %>
-                      <%= link_to 'Profile', admin_author_path(current_author), class: 'menu__link link' %>
+                      <%= link_to 'Profile', author_path(current_author), class: 'menu__link link' %>
                       <%= link_to 'Logout', logout_path, class: 'menu__link link' %>
                   </div>
               <% else %>

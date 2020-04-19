@@ -24,7 +24,14 @@ class ApplicationController < ActionController::Base
     !current_account.nil?
   end
 
+  def authorized?
+    author_id = params[:author_id]
+    author_id ||= params[:id]
+    current_author.id == author_id.to_i
+  end
+
   def authorized
+    redirect_to "/403" unless authorized?
     redirect_to login_url unless logged_in?
   end
 end
