@@ -1,24 +1,34 @@
 .posts {
     min-height: $default-min-height;
-}
 
-.posts__title {
-    margin-bottom: $margin-2;
-}
-
-.posts__left {
-    margin-bottom: $margin-2;
-    ul {
-        list-style: none;
+    &__title {
+        margin-bottom: $margin-2;
     }
-}
+    
+    &__left {
+        margin-bottom: $margin-2;
+        ul {
+            list-style: none;
+        }
+    }
+    
+    &__right {
+        display: none;
+    }
 
-.posts__right {
-    display: none;
-}
+    &__empty {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-.posts__card {
-    margin-bottom: $margin-5;
+        .posts__welcome {
+            margin-top: $margin-4;
+        }
+    }
+    
+    &__card {
+        margin-bottom: $margin-5;
+    }
 }
 
 @include desktop {
@@ -36,6 +46,12 @@
         margin-bottom: $margin-5;
     }
 
+    .posts__empty {
+        .posts__welcome {
+            margin-top: 0;
+        }
+    }
+    
     .posts__welcome {
         max-width: 500px;
     }
