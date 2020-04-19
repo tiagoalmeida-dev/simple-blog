@@ -15,11 +15,17 @@
         color: $gray-color;
     }
 
+    p img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
     strong {
         font-weight: $font-weight-bold;
     }
 
-    em {
+    p em {
         font-style: italic;
     }
 
@@ -53,5 +59,11 @@
         margin: 20px;
         font-family: monospace;
         color: $light-color;
+    }
+}
+
+@include desktop {
+    p img {
+        max-width: 50%;
     }
 }
