@@ -1,0 +1,12 @@
+<%= link_to author_path(author), class: "author__link", action: 'go' do %>
+<div class="author__header">
+    <div>
+        <div class="author__circle">
+            <%= image_tag(load_author_avatar(author.account.email), alt: "author image", class: "author__image") %>
+        </div>
+    </div>
+    <div class="author__name">
+        <p><%= author.name %></p>
+    </div>
+</div>    
+<% end %>

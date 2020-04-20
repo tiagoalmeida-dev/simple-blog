@@ -1,1 +1,9 @@
-<%= render 'admin/authors/profile' %>
+<main class="author">
+    <div class="container">
+        <%= render 'authors/profile', author: @author %>
+        <% for post in @posts %>
+            <%= render 'admin/posts/item', post: post %>
+        <% end %>
+    </div>
+</main>
+

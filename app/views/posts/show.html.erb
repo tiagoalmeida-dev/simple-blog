@@ -1,15 +1,6 @@
 <main class="post">
     <div class="container">
-        <div class="author__header">
-            <div>
-                <div class="author__circle author__circle">
-                    <%= image_tag(load_author_avatar(@post.author.account.email), alt: "author image", class: "author__image author__image") %>
-                </div>
-            </div>
-            <div class="author__name author__name">
-                <p><%= @post.author.name %></p>
-            </div>
-        </div>
+        <%= render 'authors/profile', author: @post.author %>
 
         <div class="post__header">
             <h1 class="post__title title--lg"><%= @post.title %></h1>

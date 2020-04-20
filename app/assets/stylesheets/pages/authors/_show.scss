@@ -8,6 +8,10 @@
         margin-bottom: $margin-5;
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__circle {
         display: flex;
         justify-content: center;
@@ -29,6 +33,7 @@
         font-size: $font-size-6;
         font-weight: $font-weight-semi-bold;
         padding: 0 $margin-2;
+        color: $dark-font-color;
 
         &--sm {
             font-size: $font-size-5;
