@@ -1,5 +1,5 @@
 <main class="container post-form">
-    <%= form_with(model: [current_author, @post], url: admin_author_posts_path, local: true, class: "form") do |f| %>
+    <%= form_with(model: [current_author, @post], url: url, local: true, class: "form") do |f| %>
         <div class="post-form__header">
             <div class="field-group post-form__group">
                 <%= f.text_field :title, class: "field field__title", placeholder: "Every post begins with a title..."%>

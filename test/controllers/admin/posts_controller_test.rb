@@ -37,7 +37,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update a post" do
     patch admin_author_post_url(@post.author, @post), params: {post: {title: 'Update post', body: @post.body, author_id: @author.id}}
-    assert_redirected_to admin_author_post_url(@post.author, @post)
+    assert_redirected_to admin_author_posts_url(@post.author)
   end
 
   test "should delete a post" do

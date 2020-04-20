@@ -24,7 +24,7 @@ class Admin::PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to admin_author_post_url(current_author, @post)
+      redirect_to admin_author_posts_url current_author
     else
       render :edit
     end

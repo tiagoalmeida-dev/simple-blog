@@ -3,7 +3,8 @@ class Slug
   RULES = [
     {from: /[\s-]/, to: "-"},
     {from: /@/, to: "at"},
-    {from: /&/, to: "and"}, 
+    {from: /&/, to: "and"},
+    {from: /[\?!\.]/, to: ""}, 
     {from: /\W/, to: "-"},
     {from: /_+|-+/, to: "-"}
   ]

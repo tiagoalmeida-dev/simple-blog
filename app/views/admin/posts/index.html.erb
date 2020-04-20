@@ -6,7 +6,7 @@
                 <% for post in @posts %>
                     <li>
                         <div class="posts__card card">
-                            <%= link_to post_path(post), class: "card__link", action: 'go' do %>
+                            <%= link_to post_path(slug: post.slug), class: "card__link", action: 'go' do %>
                                 <div class="card__content">
                                     <div class="card__header">
                                         <h3 class="card__title"><%= post.title %></h3>

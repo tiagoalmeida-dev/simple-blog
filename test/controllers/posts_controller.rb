@@ -11,7 +11,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get a post" do
-    get post_url(@post)
+    get post_url(slug: @post.slug)
     assert_response :success
   end
 end

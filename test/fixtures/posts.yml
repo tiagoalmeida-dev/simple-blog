@@ -3,14 +3,17 @@
 first:
   title: 'First post'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
+  slug: 'first-post'
   author: first
 
 second:
   title: 'Second post'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
+  slug: 'second-post'
   author: second
 
 third:
   title: 'Third post'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
+  slug: 'third-post'
   author: first

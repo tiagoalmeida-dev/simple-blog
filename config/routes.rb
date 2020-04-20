@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show], param: :slug
   resources :authors, only: [:show]
 
   namespace :admin do
