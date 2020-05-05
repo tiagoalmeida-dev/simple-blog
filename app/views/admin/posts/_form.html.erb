@@ -1,3 +1,5 @@
+<%= render 'common/messages', entity: @post %>
+
 <main class="container post-form">
     <%= form_with(model: [current_author, @post], url: url, local: true, class: "form") do |f| %>
         <div class="post-form__header">

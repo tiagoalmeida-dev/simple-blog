@@ -1,13 +1,4 @@
-<% if @author.errors.full_messages.any? %>
-    <% @author.errors.full_messages.each do |error_message| %>
-        <div class="message">
-            <div class="message__container message--alert">
-                <button class="message__button">close</button>
-                <p class="message__text"><%= error_message %></p>
-            </div>
-        </div>
-    <% end %>
-<% end %>
+<%= render 'common/messages', entity: @author %>
 
 <main class="container">
     <div class="auth">
