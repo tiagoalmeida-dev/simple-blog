@@ -1,7 +1,7 @@
 <div class="item">
     <%= link_to post_path(slug: post.slug), class: "item__action", action: 'go' do %>
         <h3 class="item__title"> <%= post.title %></h3>
-        <p class="item__body"><%= limit_text(post.body) %></p>
+        <p class="item__body"><%= limit_text(post.summary) %></p>
         <p class="item__date"><%= pretty_date(post.created_at) %></p>
     <% end %>
 </div>

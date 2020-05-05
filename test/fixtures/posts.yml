@@ -2,18 +2,21 @@
 
 first:
   title: 'First post'
+  summary: 'Et nihil quia voluptates sit itaque veritatis. Eius id nihil labore explicabo ut quasi eos. Inventore libero esse qui aut deleniti. Nihil id quis dicta. Ut voluptas laudantium sunt et necessitatibus et voluptas ad.'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
   slug: 'first-post'
   author: first
 
 second:
   title: 'Second post'
+  summary: 'Et nihil quia voluptates sit itaque veritatis. Eius id nihil labore explicabo ut quasi eos. Inventore libero esse qui aut deleniti. Nihil id quis dicta. Ut voluptas laudantium sunt et necessitatibus et voluptas ad. '
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
   slug: 'second-post'
   author: second
 
 third:
   title: 'Third post'
+  summary: 'Et nihil quia voluptates sit itaque veritatis. Eius id nihil labore explicabo ut quasi eos. Inventore libero esse qui aut deleniti. Nihil id quis dicta. Ut voluptas laudantium sunt et necessitatibus et voluptas ad. '
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis.'
   slug: 'third-post'
   author: first

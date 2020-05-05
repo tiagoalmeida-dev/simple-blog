@@ -11,10 +11,10 @@
             </div>
         </div>
         <div class="field-group">
-            <div class="coffpad-buttons" id="coffpad-buttons" />
+            <%= f.text_area :summary, class: "field field__text-area field__text-area--sm", placeholder: "Create a summary is the best way to present your idea..." %>
         </div>
         <div class="field-group">
-            <%= f.text_area :body, class: "field field__text-area", id: "coffpad", placeholder: "Write your body..." %>
+            <%= f.text_area :body, class: "field field__text-area", placeholder: "Write your body..." %>
         </div>
     <% end %>
 </main>

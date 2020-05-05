@@ -6,6 +6,11 @@
       padding: 20px 0;
       font-size: $font-size-5;
       line-height: $line-height-2;
+      margin-bottom: $margin-1;
+
+      &--sm {
+          min-height: 200px;
+      }
   }
 
   .field__title{
