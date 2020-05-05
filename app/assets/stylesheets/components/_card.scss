@@ -53,10 +53,11 @@
 
 .card__actions {
     margin-top: $margin-2;
-    a {
+    > a {
         color: $primary-color;
         font-size: $font-size-3;
         font-weight: $font-weight-bold;
         text-decoration: none;
+        margin-right: $margin-1;
     }
 }

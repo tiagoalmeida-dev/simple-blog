@@ -1,15 +1,14 @@
 <main class="posts container">
     <% if !@posts.empty? %>
-    <div class="posts__wrapper">
-        <div class="posts__left">
-            <ul>
-                <% for post in @posts %>
-                    <li>
-                        <div class="posts__card card">
-                            <%= link_to post_path(slug: post.slug), class: "card__link", action: 'go' do %>
+        <div class="posts__wrapper">
+            <div class="posts__left">
+                <ul>
+                    <% for post in @posts %>
+                        <li>
+                            <div class="posts__card card">
                                 <div class="card__content">
                                     <div class="card__header">
-                                        <h3 class="card__title"><%= post.title %></h3>
+                                        <%= link_to post.title, post_path(slug: post.slug), class: "card__title card__link" %>
                                         <%= image_tag("arrow-right.svg", alt: "a arrow facing to right", class: "card__arrow") %>
                                     </div>
                                     <div class="card__body">
@@ -17,21 +16,21 @@
                                     </div>
                                 </div>
                                 <div class="card__actions">
+                                    <%= link_to "Edit", edit_admin_author_post_path(current_author, post) %>
                                     <%= link_to "Delete", admin_author_post_path(current_author, post), method: :delete %>
                                 </div>
-                            <% end %>
-                        </div>
-                    </li>
-                <% end %>
-            </ul>
-        </div>
-        <div class="posts__right">
-            <div class="posts__new-button">
-                <%= link_to "New", new_admin_author_post_path(current_author), class: "button button--secondary" %>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
             </div>
-            <p class="posts__welcome title title--lg"> Hey <em class="title--em"><%= current_author.name %></em> welcome back, these are yours last posts.</p>
+            <div class="posts__right">
+                <div class="posts__new-button">
+                    <%= link_to "New", new_admin_author_post_path(current_author), class: "button button--secondary" %>
+                </div>
+                <p class="posts__welcome title title--lg"> Hey <em class="title--em"><%= current_author.name %></em> welcome back, these are yours last posts.</p>
+            </div>
         </div>
-    </div>
     <% else %>
         <div class="posts__empty">
             <div class="posts__new-button">
