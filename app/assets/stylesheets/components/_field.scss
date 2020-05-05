@@ -1,6 +1,7 @@
-.field-group {
+.field-group, .field_with_errors {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .field {
         display: block;

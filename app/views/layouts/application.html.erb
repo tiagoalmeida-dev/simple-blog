@@ -14,7 +14,8 @@
   <body>
       <% if flash.alert %>
           <div class="message">
-              <div class="message--alert">
+              <div class="message__container message--alert">
+                  <button class="message__button">close</button>
                   <p class="message__text"><%= flash.alert %></p>
               </div>
           </div>

@@ -1,3 +1,14 @@
+<% if @author.errors.full_messages.any? %>
+    <% @author.errors.full_messages.each do |error_message| %>
+        <div class="message">
+            <div class="message__container message--alert">
+                <button class="message__button">close</button>
+                <p class="message__text"><%= error_message %></p>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
 <main class="container">
     <div class="auth">
 
@@ -9,31 +20,17 @@
             <%= form_with(model: @author, url: admin_authors_path, local: true, class: "form") do |author_form| %>
                 <div class="field-group">
                     <%= author_form.text_field :name, class: "field field__text", placeholder: "Name"  %>
-                    <% if !@author.errors["name"].empty? %>
-                        <p class="field__error"><%= @author.errors["name"].first %></p>
-                    <% end %>
-
                 </div>
 
                 <%= author_form.fields_for :account do |account_form| %>
                     <div class="field-group">
                         <%= account_form.text_field :email, class: "field field__text", placeholder: "Email" %>
-                        <% if !@author.errors["account.email"].empty? %>
-                            <p class="field__error"><%= @author.errors["account.email"].first %></p>
-                        <% end %>
                     </div>
                     <div class="field-group">
                         <%= account_form.password_field :password, class: "field field__password", placeholder: "Password" %>
-                        <% if !@author.errors["account.password"].empty? %>
-                            <p class="field__error"><%= @author.errors["account.password"].first %></p>
-                        <% end %>
-
                     </div>
                     <div class="field-group">
                         <%= account_form.password_field :password_confirmation, class: "field field__password", placeholder: "Confirm Password" %>
-                        <% if !@author.errors["account.password_confirmation"].empty? %>
-                            <p class="field__error"><%= @author.errors["account.password_confirmation"].first %></p>
-                        <% end %>
                     </div>
                 <% end %>
 
