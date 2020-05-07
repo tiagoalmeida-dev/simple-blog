@@ -14,8 +14,7 @@
         color: $light-font-color;
 
         &:hover {
-            color: $primary-button-bg-color;
-            background: $light-font-color
+            background: lighten($dark-color, 5%);
         }
     }
 

@@ -19,19 +19,24 @@
         max-width: 100%;
         display: block;
         margin: 0 auto;
+        border-radius: $default-radius;
     }
 
-    strong {
+    b, strong {
         font-weight: $font-weight-bold;
     }
 
-    p em {
+    p em, i {
         font-style: italic;
     }
 
-    > ul {
-        margin-left: 18px;
+    > ul, ol {
+        display: block;
         margin-bottom: $margin-4;
+        font-size: $font-size-5;
+        color: $dark-color;
+        text-align: left;
+        list-style-position: inside;
     }
 
     > blockquote {
@@ -50,7 +55,7 @@
         margin-bottom: $margin-4;
         line-height: $line-height-2;
         background: $dark-color;
-        border-radius: 5px;
+        border-radius: $default-radius;
         overflow: scroll;
     }
 

@@ -1,0 +1,45 @@
+.tool {
+    display: flex;
+    padding: $margin-1 $margin-2;
+    justify-content: space-between;
+    border-radius: $default-radius;
+    background: #FAFAFA;
+
+    &__items {
+        list-style: none;
+
+        li {
+            display: inline;
+        }
+    }
+
+    &__button {
+        background: none;
+        padding: 1em 1.5em;
+        font-weight: bold;
+        font-size: $font-size-3;
+        border-radius: $default-radius;
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+
+        &:hover {
+            background: $primary-color;
+
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+
+    &__separator {
+        width: 2px;
+        height: 30px;
+        border-radius: $default-radius;
+        margin-bottom: -10px;
+        display: inline-block;
+        background: $gray-color;
+    }
+}

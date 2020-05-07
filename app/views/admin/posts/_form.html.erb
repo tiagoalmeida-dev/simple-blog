@@ -1,20 +1,34 @@
 <%= render 'common/messages', entity: @post %>
 
-<main class="container post-form">
+<main class="post-form">
+    <div class="container">
+
     <%= form_with(model: [current_author, @post], url: url, local: true, class: "form") do |f| %>
         <div class="post-form__header">
             <div class="field-group post-form__group">
                 <%= f.text_field :title, class: "field field__title", placeholder: "Every post begins with a title..."%>
             </div>
-            <div class="post-form__actions">
-                <%= f.submit "Write", class: "button button--secondary" %>
-            </div>
         </div>
         <div class="field-group">
             <%= f.text_area :summary, class: "field field__text-area field__text-area--sm", placeholder: "Create a summary is the best way to present your idea..." %>
         </div>
+        <div class="tool">
+            <ul class="tool__items">
+                <li><button class="header-1 tool__button"><%= image_tag("h.svg") %></button></li>
+                <li><button class="bold tool__button"><%= image_tag("b.svg") %></button></li>
+                <li><button class="italic tool__button"><%= image_tag("i.svg") %></button></li>
+                <li><button class="scratch tool__button"><%= image_tag("s.svg") %></button></li>
+                <li><span class="tool__separator" /></li>
+                <li><button class="ordered-list tool__button"><%= image_tag("ordered.svg") %></button></li>
+                <li><button class="unordered-list tool__button"><%= image_tag("unordered.svg") %></button></li>
+            </ul>
+            <button class="button button--primary">save</button>
+        </div>
         <div class="field-group">
-            <%= f.text_area :body, class: "field field__text-area", placeholder: "Write your body..." %>
+            <%= f.text_area :body, class: "editor field field__text-area", placeholder: "Write your body..." %>
         </div>
     <% end %>
+    </div>
 </main>
+
+<%= javascript_pack_tag 'editor', 'data-turbolinks-track': 'reload' %>
