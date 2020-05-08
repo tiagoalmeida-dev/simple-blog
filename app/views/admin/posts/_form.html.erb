@@ -31,4 +31,6 @@
     </div>
 </main>
 
-<%= javascript_pack_tag 'editor', 'data-turbolinks-track': 'reload' %>
+<% content_for :head do %>
+ <%= javascript_pack_tag 'editor', 'data-turbolinks-track': 'reload' %>
+<% end %>
