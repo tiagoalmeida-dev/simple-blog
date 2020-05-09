@@ -3,7 +3,14 @@
     font-size: $default-font-size;
 
     > h2 {
-        font-size: $font-size-4;
+        font-size: 3.5em;
+        font-weight: $font-weight-medium;
+        margin: $margin-6 0 $margin-4 0;
+        text-weight: $font-weight-bold
+    }
+
+    > h3 {
+        font-size: $font-size-6;
         font-weight: $font-weight-medium;
         margin: $margin-4 0 $margin-3 0;
     }
@@ -12,7 +19,7 @@
         margin-bottom: $margin-4;
         line-height: $line-height-2;
         font-size: $font-size-5;
-        color: $gray-color;
+        color: darken($gray-color, 10%);
     }
 
     p img {
