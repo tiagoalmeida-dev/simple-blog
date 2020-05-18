@@ -2,17 +2,18 @@
 
     font-size: $default-font-size;
 
+    > h1, h2, h3, h4 {
+        font-weight: $font-weight-bold;
+    }
+
     > h2 {
         font-size: 3.5em;
-        font-weight: $font-weight-medium;
         margin: $margin-6 0 $margin-4 0;
-        text-weight: $font-weight-bold
     }
 
     > h3 {
-        font-size: $font-size-6;
-        font-weight: $font-weight-medium;
-        margin: $margin-4 0 $margin-3 0;
+        font-size: 2.5em;
+        margin: $margin-6 0 $margin-3 0;
     }
 
     > p {
@@ -64,13 +65,22 @@
         background: $dark-color;
         border-radius: $default-radius;
         overflow: scroll;
+        padding: 20px;
+
+        > code {
+            color: $light-color;
+            background: none;
+        }
     }
 
     code {
         width: 100%;
-        margin: 20px;
         font-family: monospace;
         color: $light-color;
+        background: $primary-color;
+        padding: 0 5px 0 5px;
+        margin: 0 5px 0 5px;
+        border-radius:  $default-radius;
     }
 }
 
