@@ -80,7 +80,38 @@
         background: $primary-color;
         padding: 0 5px 0 5px;
         margin: 0 5px 0 5px;
-        border-radius:  $default-radius;
+    }
+
+    > table {
+        width: 100%;
+        margin: $margin-6 0 $margin-4 0;
+        color: darken($gray-color, 10%);
+        border-collapse: collapse;
+
+        th {
+            border: 1px solid darken($gray-color, 10%);
+            font-weight: $font-weight-bold;
+            color: $dark-color;
+            padding: 10px;
+            margin: 0;
+            text-align: start;
+            font-size: $font-size-6;
+        }
+
+        td {
+            border: 1px solid darken($gray-color, 10%);
+            padding: 10px;
+            font-size: $font-size-5;
+        }
+    }
+
+    a {
+        color: $dark-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-color;
+        }
     }
 }
 
