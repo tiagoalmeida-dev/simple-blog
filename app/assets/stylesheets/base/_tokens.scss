@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Montserrat';    
+  src:  font-url('Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';    
+  src:  font-url('Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';    
+  src:  font-url('Montserrat-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';    
+  src:  font-url('Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
 $dark-color: #191919;
 $gray-color: #666;
 $light-color: #FFF;
