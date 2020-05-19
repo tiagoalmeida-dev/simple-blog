@@ -8,4 +8,8 @@ SitemapGenerator::Sitemap.create do
      Post.find_each do |post|
        add post_path(post.slug), :lastmod => post.updated_at
      end
+
+     Author.find_each do |author|
+      add author_path(author.id), :lastmod => author.updated_at
+    end
 end
