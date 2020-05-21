@@ -6,12 +6,7 @@
         </div>
     </div>
     <div class="author__name">
-        <p><%= author.name %></p>
+        <h1><%= author.name %></h1>
     </div>
 </div>    
-<% end %>
-
-<% content_for :head do %>
- <%= tag.meta(name:"description", content: "#{author.name} profile") %>
- <%= tag.meta(name:"author", content: author.name) %>
 <% end %>
