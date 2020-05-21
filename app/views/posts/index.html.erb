@@ -9,3 +9,8 @@
         <% end %>
     </div>
 </main>
+
+<% content_for :head do %>
+ <%= tag.meta(name:"description", content: "coffeebreak") %>
+ <%= tag.meta(name:"keywords", content: "coffee break, developer, engineering, computer science, technology") %>
+<% end %>
