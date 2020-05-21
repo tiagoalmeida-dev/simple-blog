@@ -6,6 +6,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+  
+    if ENV.fetch("RAILS_ENV") == "production"
+       redirect_to login_url
+    end
+
     @account = Account.find_by_email(params[:email])
 
     if @account && @account.authenticate(params[:password])
