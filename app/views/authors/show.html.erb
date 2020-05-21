@@ -1,6 +1,11 @@
 <main class="author">
     <div class="container">
         <%= render 'authors/profile', author: @author %>
+
+        <% if not @posts.empty? %>
+            <h1 class="author__title"># Latest posts</h1>
+        <% end %>
+
         <% for post in @posts %>
             <%= render 'admin/posts/item', post: post %>
         <% end %>
