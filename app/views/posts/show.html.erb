@@ -15,7 +15,12 @@
     </div>
 </main>
 
+<% content_for :title do %> 
+    <%= "#{@post.title} |" %> 
+<% end %>
+
 <% content_for :head do %>
- <%= tag.meta(name:"description", content: @post.title) %>
+ <%= tag.meta(name:"description", content: @post.summary) %>
  <%= tag.meta(name:"author", content: @post.author.name) %>
 <% end %>
+.
