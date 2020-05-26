@@ -11,6 +11,10 @@ class Admin::AuthorsController < ApplicationController
   end
 
   def create
+    if ENV.fetch("RAILS_ENV") == "production"
+      redirect_to login_url
+    end
+    
     @author = Author.create(author_params)
 
     if @author.save
