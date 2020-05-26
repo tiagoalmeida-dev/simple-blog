@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167441630-1"></script>
     <script>
@@ -31,9 +31,9 @@
               </div>
           </div>
       <% end %>
-      <menu class="menu">
+      <nav class="menu">
           <div class="container menu__container">
-              <%= link_to "Coffee Break", posts_path, class: "menu__brand" %>
+              <%= link_to "Coffee Break", root_path, class: "menu__brand" %>
               <% if logged_in?  %>
                   <ul class="navbar">
                       <%= nav_link_to 'Posts', admin_author_posts_path(current_author), class: 'menu__link link' %>
@@ -41,10 +41,10 @@
                       <%= nav_link_to 'Logout', logout_path, class: 'menu__link link' %>
                   </ul>
               <% else %>
-                  <a href="https://github.com/wnascy/coffee-break" class="button button--primary">Github</a>
+                  <a href="https://github.com/wevnasc/coffee-break" class="button button--primary">Github</a>
               <% end %>
           </div>
-      </menu>
+      </nav>
       <%= yield %>
       <footer class="footer">
           <div class="container">
